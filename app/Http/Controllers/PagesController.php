@@ -5,6 +5,7 @@ use App\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
 use App\Sample;
+use App\Food;
 class PagesController extends Controller {
 
 
@@ -30,8 +31,8 @@ class PagesController extends Controller {
     //Customer Functions
     public function showCustomerPage()
     {
-
-        return view('customer/index');
+        $foods = Food::getFoodDetails();
+        return view('customer/index')->with('foods',$foods);
 
     }
     public function showCustomerOrdersPage()
