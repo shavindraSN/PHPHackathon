@@ -26,5 +26,22 @@ class PagesController extends Controller {
         return view('sample')->with('sample',$samples);
 
     }
+    //-----------------------------------------------
+    //Customer Functions
+    public function showCustomerPage()
+    {
+
+        return view('customer/index');
+
+    }
+    public function showCustomerOrdersPage()
+    {
+
+        return view('customer/myorders');
+
+    }
+    //End Of Customer Functions
+    //-----------------------------------------------
+
 
 }

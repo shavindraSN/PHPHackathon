@@ -40,7 +40,11 @@ class HomeController extends Controller {
         if( Auth::user()->usertype=="customer")
         {
 
-            return view('index');
+            return view('customer/index');
+        }
+        if( Auth::user()->usertype=="cashier")
+        {
+            return view('cashier/index');
         }
 	}
 

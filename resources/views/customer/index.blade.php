@@ -1,5 +1,5 @@
 @section('content')
-@extends('admin.master')
+@extends('customer.master')
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
@@ -12,7 +12,7 @@
 <!-- Main content -->
 <section class="content">
     <div class="row">
-        This is Index of Admin !!
+        This is Index of Customer !!
     </div>
     <!-- /.row -->
 </section>
