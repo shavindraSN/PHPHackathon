@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use Auth;
+use App\Food;
 class HomeController extends Controller {
 
 	/*
@@ -44,7 +45,9 @@ class HomeController extends Controller {
         }
         if( Auth::user()->usertype=="cashier")
         {
-            return view('cashier/index');
+            $foods=Food::getFoodDetails();
+
+            return view('cashier/index')->with('food',$foods);
         }
 	}
 
