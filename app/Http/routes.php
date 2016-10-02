@@ -42,3 +42,14 @@ Route::get('customer', 'PagesController@showCustomerPage');
 Route::get('customerOrders', 'PagesController@showCustomerOrdersPage');
 //End of Customer Routes
 
+//Cashier Routes
+//Route::get('cashier', 'PagesController@showSamplePage');
+Route::post('addFood', 'CashierController@addFood');
+Route::post('updateFood', 'CashierController@updateFood');
+Route::get('deletefood{id}', 'CashierController@deleteFood');
+Route::get('updateFood{id}', 'CashierController@showUpdateFood');
+
+//End of Sample Routes
+
+
+//
