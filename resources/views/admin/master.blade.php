@@ -100,7 +100,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="{{url('repo')}}">
                         <i class="fa fa-envelope"></i> <span>Reports</span>
 
                     </a>

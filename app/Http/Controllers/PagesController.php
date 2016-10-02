@@ -43,6 +43,12 @@ class PagesController extends Controller {
     }
     //End Of Customer Functions
     //-----------------------------------------------
+    public function showReportsPage()
+    {
+        $samples=Food::getFoodDetails();
 
+        return view('admin/repo')->with('sample',$samples);
+
+    }
 
 }

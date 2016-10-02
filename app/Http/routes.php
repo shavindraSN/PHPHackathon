@@ -42,3 +42,7 @@ Route::get('customer', 'PagesController@showCustomerPage');
 Route::get('customerOrders', 'PagesController@showCustomerOrdersPage');
 //End of Customer Routes
 
+
+//Admin routes
+Route::get('repo', 'PagesController@showReportsPage');
+
