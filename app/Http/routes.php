@@ -21,6 +21,7 @@ Route::controllers([
 ]);
 
 Route::get('login', 'PagesController@showLoginPage');
+Route::get('admin', 'HomeController@index');
 Route::get('register', 'PagesController@showRegisterPage');
 Route::get('sample', 'PagesController@showSamplePage');
 Route::post('addSample', 'SampleController@addSample');

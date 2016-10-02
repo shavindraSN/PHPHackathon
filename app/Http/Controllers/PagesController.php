@@ -16,10 +16,13 @@ class PagesController extends Controller {
     {
         return view('login');
     }
+    public function showAdminPage()
+    {
+        return view('admin/index');
+    }
     public function showSamplePage()
     {
         $samples=Sample::getSampleDetails();
-        //pass received user 's details to view
         return view('sample')->with('sample',$samples);
 
     }

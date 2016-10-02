@@ -1,5 +1,5 @@
 <?php namespace App\Http\Controllers;
-
+use Auth;
 class HomeController extends Controller {
 
 	/*
@@ -18,10 +18,10 @@ class HomeController extends Controller {
 	 *
 	 * @return void
 	 */
-//	public function __construct()
-//	{
-//		$this->middleware('auth');
-//	}
+	public function __construct()
+	{
+		$this->middleware('auth');
+	}
 
 	/**
 	 * Show the application dashboard to the user.
@@ -30,11 +30,17 @@ class HomeController extends Controller {
 	 */
 	public function index()
 	{
-		return redirect('sample');
+
+        if( Auth::user()->usertype=="admin")
+        {
+            return view('admin/index');
+
+        }
+        if( Auth::user()->usertype=="customer")
+        {
+
+            return view('index');
+        }
 	}
-    public function login()
-    {
-        return view("jkjk");
-    }
 
 }
