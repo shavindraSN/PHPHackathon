@@ -33,6 +33,7 @@ class HomeController extends Controller {
 
         if( Auth::user()->usertype=="admin")
         {
+
             return view('admin/index');
 
         }

@@ -36,9 +36,10 @@
                     <!-- form start -->
                     @foreach($sample as $samples)
                     @endforeach
+                    <form  method="POST" action="{{ url('updateSample') }}">
+                        <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                     <div class="col-md-6">
-                        <form  method="POST" action="{{ url('updateSample') }}">
-                            <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
+
 
                             <div class="box-body">
                                 <div class="form-group">
@@ -65,7 +66,7 @@
                     </div>
 
                     <div class="col-md-6">
-                        <form role="form">
+
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Date</label>
