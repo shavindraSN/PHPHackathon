@@ -2,7 +2,8 @@
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
-
+use DB;
+use App\Order;
 use Illuminate\Http\Request;
 use App\Sample;
 class PagesController extends Controller {
@@ -36,8 +37,9 @@ class PagesController extends Controller {
     }
     public function showCustomerOrdersPage()
     {
-
-        return view('customer/myorders');
+        $orders = Order::getMyOrders();
+        return $orders;
+        //return view('customer/myorders')->with('order',$orders);
 
     }
     //End Of Customer Functions

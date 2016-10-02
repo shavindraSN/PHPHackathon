@@ -1,22 +1,45 @@
 @section('content')
 @extends('customer.master')
 <!-- Content Header (Page header) -->
-<section class="content-header">
-    <h1>
-        General Form Elements
-        <small>Preview</small>
-    </h1>
-    <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Forms</a></li>
-        <li class="active">General Elements</li>
-    </ol>
-</section>
+
 
 <!-- Main content -->
 <section class="content">
     <div class="row">
-        This is myorders of Customer !!
+        <div class="col-xs-12">
+            <div class="box box-primary">
+                <div class="box-header">
+                    <h3 class="box-title"> View My Orders</h3>
+                </div>
+
+                <!-- /.box-header -->
+                <div class="box-body">
+                    <table id="example1" class="table table-bordered">
+                        <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Food Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($order as $orders)
+                                <tr>
+                                    <td>{{$order->id}}</td>
+                                    <td>{{$order->food}}</td>
+                                    <td>{{$order->qty}}</td>
+                                    <td>{{$order->tprice}}</td>
+                                    <td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+        </div>
     </div>
     <!-- /.row -->
 </section>

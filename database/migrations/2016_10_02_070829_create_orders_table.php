@@ -21,8 +21,6 @@ class CreateOrdersTable extends Migration {
             $table->integer('user_id')->unsigned();
             $table->float('tprice');
             $table->string('status');
-            $table->foreign('food_id')->references('id')->on('foods');
-            $table->foreign('user_id')->references('id')->on('users');
 			$table->timestamps();
 		});
 	}
