@@ -38,8 +38,8 @@ class PagesController extends Controller {
     public function showCustomerOrdersPage()
     {
         $orders = Order::getMyOrders();
-        return $orders;
-        //return view('customer/myorders')->with('order',$orders);
+        //return $orders;
+        return view('customer/myorders')->with('order',$orders);
 
     }
     //End Of Customer Functions
