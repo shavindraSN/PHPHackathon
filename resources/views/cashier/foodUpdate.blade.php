@@ -34,9 +34,9 @@
                     </div>
                     <!-- /.box-header -->
                     <!-- form start -->
-                    @foreach($sample as $samples)
+                    @foreach($food as $foods)
                     @endforeach
-                    <form  method="POST" action="{{ url('updateSample') }}">
+                    <form  method="POST" action="{{ url('updateFood') }}">
                         <input name="_token" type="hidden" value="{{ csrf_token() }}"/>
                     <div class="col-md-6">
 
@@ -44,14 +44,14 @@
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Food Name</label>
-                                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" value="{{ $samples->name}}">
-                                    <input type="hidden" class="form-control" id="id" name="id" placeholder="Enter Name" value="{{ $samples->id}}">
+                                    <input type="text" class="form-control" id="food" name="food" placeholder="Enter Food Name" value="{{ $foods->food}}">
+                                    <input type="hidden" class="form-control" id="id" name="id" placeholder="Enter id" value="{{ $foods->id}}">
 
                                 </div>
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Unit Price</label>
-                                    <input type="text" class="form-control" id="age" name="age" placeholder="Enter Age" value="{{ $samples->age }}">
+                                    <input type="text" class="form-control" id="uprice" name="uprice" placeholder="Enter UnitPrice" value="{{ $foods->uprice }}">
                                 </div>
 
                                 <div class="form-group">

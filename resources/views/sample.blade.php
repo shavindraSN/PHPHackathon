@@ -70,7 +70,7 @@
 
                     <div class="col-md-6">
 
-                            <div class="box-body">
+                                <div class="box-body">
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Date</label>
                                     <div class="input-group date">

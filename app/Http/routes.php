@@ -42,7 +42,21 @@ Route::get('customer', 'PagesController@showCustomerPage');
 Route::get('customerOrders', 'PagesController@showCustomerOrdersPage');
 //End of Customer Routes
 
+<<<<<<< HEAD
 
 //Admin routes
 Route::get('repo', 'PagesController@showReportsPage');
 
+=======
+//Cashier Routes
+//Route::get('cashier', 'PagesController@showSamplePage');
+Route::post('addFood', 'CashierController@addFood');
+Route::post('updateFood', 'CashierController@updateFood');
+Route::get('deletefood{id}', 'CashierController@deleteFood');
+Route::get('updateFood{id}', 'CashierController@showUpdateFood');
+
+//End of Sample Routes
+
+
+//
+>>>>>>> 24964d32caab33bd4b2b49f280b62e7a2f748ee7
